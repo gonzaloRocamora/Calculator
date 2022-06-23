@@ -1,13 +1,12 @@
-import React from 'react';
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import Calculadora from './Calculadora'
+import { StrictMode } from "react";
 
-function Index() {
-  return (
-    <div>
-        <Calculadora />
-    </div>
-  )
-}
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
 
-ReactDOM.render(<Index />, document.getElementById('root'));
+root.render(
+  <StrictMode>
+    <Calculadora />
+  </StrictMode>
+);
